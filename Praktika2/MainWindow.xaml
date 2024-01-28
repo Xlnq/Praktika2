@@ -1,0 +1,32 @@
+﻿<Window x:Class="Praktika2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Praktika2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920" Background="#A46676">
+    <Grid>
+        <Grid x:Name="LoginGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="53"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="1" Grid.Row="1" Text="Авторизация" FontSize="60" FontWeight="DemiBold" HorizontalAlignment="Center" Foreground="White"></TextBlock>
+            <TextBox x:Name="Login" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#D9D9D9" Width="600" Height="50" Text="Введите логин..." FontSize="30"></TextBox>
+            <PasswordBox x:Name="Password" Grid.Column="1" Grid.Row="3" FontSize="20" HorizontalAlignment="Center" Background="#D9D9D9" VerticalAlignment="Top" Width="600" Height="50"></PasswordBox>
+            <Button x:Name="Enter" Grid.Column="1" Grid.Row="4" Width="400" Content="Войти" FontSize="35" Height="50" Background="#D9D9D9" Foreground="Black" Click="Enter_Click"></Button>
+        </Grid>
+        <Frame x:Name="Auth" Margin="0,0,0,191" NavigationUIVisibility="Hidden"/>
+        <Button x:Name="Next" Background="#D9D9D9" Foreground="Black" FontSize="22" Click="ForwardButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10">В</Button>
+        <Button x:Name="Back" Background="#D9D9D9" Foreground="Black" FontSize="22" Click="BackwardButton_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,60,10">Н</Button>
+    </Grid>
+</Window>
